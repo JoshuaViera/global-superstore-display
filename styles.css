@@ -1,0 +1,292 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.header h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* Statistics Section */
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background: #f8f9fa;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    color: #666;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: 700;
+    color: #667eea;
+    margin: 0;
+}
+
+/* Categories Section */
+.categories-section,
+.segments-section {
+    padding: 40px;
+    background: white;
+}
+
+.categories-section h2,
+.segments-section h2,
+.data-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.categories,
+.segments {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category-badge,
+.segment-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-badge:hover,
+.segment-badge:hover {
+    transform: scale(1.05);
+}
+
+.segment-badge {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Segments Section */
+.segments-section {
+    background: #f8f9fa;
+}
+
+/* Data Table Section */
+.data-section {
+    padding: 40px;
+    background: white;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 15px;
+    color: #555;
+}
+
+/* Specific column styling */
+td:nth-child(9),
+td:nth-child(11) {
+    font-weight: 600;
+}
+
+/* Positive profit in green */
+tbody tr td:nth-child(11) {
+    color: #28a745;
+}
+
+/* Alternate row styling */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Footer */
+.footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.95em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    .statistics {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .stat-value {
+        font-size: 1.5em;
+    }
+
+    .categories-section,
+    .segments-section,
+    .data-section {
+        padding: 20px;
+    }
+
+    .categories-section h2,
+    .segments-section h2,
+    .data-section h2 {
+        font-size: 1.5em;
+    }
+
+    table {
+        font-size: 0.85em;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 10px;
+    }
+
+    .header {
+        padding: 40px 20px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .category-badge,
+    .segment-badge {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
